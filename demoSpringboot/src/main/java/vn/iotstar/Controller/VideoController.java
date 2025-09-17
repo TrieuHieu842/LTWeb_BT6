@@ -28,7 +28,6 @@ public class VideoController {
     @GetMapping("saveOrUpdate")
     public String add(ModelMap model) {
         model.addAttribute("video", new Video());
-        // truyền danh sách categories xuống JSP
         model.addAttribute("categories", categoryService.findAll());
 
         return "admin/videos/add";
@@ -46,7 +45,6 @@ public class VideoController {
     public String list(ModelMap model) {
         List<Video> list = videoService.findAll();
         model.addAttribute("videos", list);
-        return "admin/videos/list"; // đúng thư mục admin/videos
         return "admin/videos/list"; 
     }
 
@@ -75,7 +73,6 @@ public class VideoController {
         List<Video> list = null;
 
         if (StringUtils.hasText(keyword)) {
-            list = videoService.findByTitleContaining(keyword); // giả sử tìm theo title
             list = videoService.findByTitleContaining(keyword);
         }
 
