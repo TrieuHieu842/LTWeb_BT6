@@ -13,7 +13,7 @@
         <h2 class="fw-bold">🎬 Video List</h2>
         <div>
             <a href="${pageContext.request.contextPath}/admin/videos/saveOrUpdate" class="btn btn-primary btn-sm">
-                ➕ Add New Video
+                Add New Video
             </a>
             <a href="${pageContext.request.contextPath}/admin/videos/searchpaginated" class="btn btn-info btn-sm">
                 🔍 Search Video

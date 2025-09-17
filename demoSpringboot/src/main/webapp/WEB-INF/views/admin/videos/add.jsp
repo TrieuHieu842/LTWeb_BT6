@@ -70,7 +70,6 @@
 <h2 style="text-align:center;">Add / Edit Video</h2>
 
 <form action="${pageContext.request.contextPath}/admin/videos/saveOrUpdate" method="post">
-    <!-- hidden id để update -->
     <input type="hidden" name="videoId" value="${video.videoId}"/>
     <table>
         <tr>
@@ -106,7 +105,7 @@
         <tr>
             <td><label>Active:</label></td>
             <td>
-                <!-- trick: unchecked checkbox sẽ không gửi => thêm hidden để luôn có value -->
+                
                 <input type="hidden" name="active" value="false"/>
                 <input type="checkbox" name="active" value="true" <c:if test="${video.active}">checked</c:if>/>
                 <span>Hiển thị</span>

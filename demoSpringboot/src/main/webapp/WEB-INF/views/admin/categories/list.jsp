@@ -83,7 +83,6 @@
         </table>
     </div>
 
-    <!-- Phân trang (giữ nguyên logic cũ của bạn) -->
     <div class="pagination">
         <c:if test="${currentPage > 0}">
             <a href="${pageContext.request.contextPath}/admin/categories/searchpaginated?name=${name}&page=${currentPage - 1}&size=5">Previous</a>
