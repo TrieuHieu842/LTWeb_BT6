@@ -56,6 +56,7 @@ public class VideoController {
         Video video = videoService.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid Video Id: " + id));
         model.addAttribute("video", video);
+        model.addAttribute("categories", categoryService.findAll());
         return new ModelAndView("admin/videos/add", model);
     }
 

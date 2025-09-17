@@ -71,8 +71,7 @@
 
 <form action="${pageContext.request.contextPath}/admin/videos/saveOrUpdate" method="post">
     <!-- hidden id để update -->
-    <input type="hidden" name="id" value="${video.videoId}"/>
-
+    <input type="hidden" name="videoId" value="${video.videoId}"/>
     <table>
         <tr>
             <td><label>Title:</label></td>
